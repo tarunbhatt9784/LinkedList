@@ -87,13 +87,16 @@ namespace RemoveFirst
         public int Count { get; set; }
         public void RemoveFromFront()
         {
-            LinkedListNode<T> temp = Head;
-            Head = Head.Next;
-            Count--;
-            if (Count == 0) Tail = null;
-            
-            // Make the object available for Garbage Collection
-            temp = null;
+            if (Count != 0)
+            {
+                LinkedListNode<T> temp = Head;
+                Head = Head.Next;
+                Count--;
+                if (Count == 0) Tail = null;
+
+                // Make the object available for Garbage Collection
+                temp = null;
+            }
         }
     }
 }

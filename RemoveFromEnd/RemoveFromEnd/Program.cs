@@ -12,7 +12,7 @@ namespace RemoveFromEnd
             // GitHub Code for Add Operation https://github.com/tarunbhatt9784/LinkedList/tree/master/LinkedListAddToFront
             LinkedList<string> list = PrepareDummyList();
 
-            // We will remove nodes one by one
+            // We will remove all nodes one by one from the end of the list
             for (int i = 0; i < 5; i++)
             {
                 // Print List 

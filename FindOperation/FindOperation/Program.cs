@@ -76,7 +76,7 @@ namespace Enumerate
         public LinkedListNode<T> GetNode(T value)
         {
             LinkedListNode<T> current = Head;
-            while (current != null && Contains(value))
+            while (current != null)
             {
                 if (current.Value.Equals(value)) return current;
                 current = current.Next;

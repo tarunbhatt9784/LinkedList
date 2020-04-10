@@ -90,9 +90,9 @@ namespace Enumerate
             int indexLoc = 0;
             while (current != null && Count-1 >= index)
             {
-                if (indexLoc == 0) return current;
-                indexLoc++;
+                if (indexLoc == index) return current;
                 current = current.Next;
+                indexLoc++;
             }
             return null;
         }

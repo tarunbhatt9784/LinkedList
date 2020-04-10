@@ -7,8 +7,20 @@ namespace LinkedListAddToFront
         static void Main(string[] args)
         {
             LinkedListNode<string> node;
-            LinkedList<string> list = new LinkedList<string>(); 
+            LinkedList<string> list = new LinkedList<string>();
+
+            /* 
+             * Ignore the logic in the for loop.
+             * A lot of it has been written to display the contents of the 
+             * Linked List in a presentable format
+             * The Logic below adds 5 element to an empty 
+             * Linked List one after another
+             * 
+             * The most important function in this project is AddToFront()
+             * in the LinkedList class
+             */
             for (int i = 0; i < 5; i++){
+                Console.WriteLine($"Add node with Data Field as 'Value -{ i}'");
                 node = new LinkedListNode<string>($"Value-{i}");
                 list.AddToFront(node);
                 string listString = "";
@@ -19,6 +31,8 @@ namespace LinkedListAddToFront
                     ptr = ptr.Next;
                 }
                 Console.WriteLine($"{listString}null");
+                Console.WriteLine($"Data field of Head --> '{list.Head.Value}' & Data field of Tail --> '{list.Tail.Value}'");
+                Console.WriteLine();
             }
         }
     }

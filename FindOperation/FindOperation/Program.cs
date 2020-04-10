@@ -67,7 +67,7 @@ namespace Enumerate
             bool doExist = false;
             while (current!= null)
             {
-                if (current.Value.Equals(value)) doExist = true;
+                if (current.Value.Equals(value)) return true;
                 current = current.Next;
             }
             return doExist;
